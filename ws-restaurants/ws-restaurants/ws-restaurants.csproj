@@ -67,10 +67,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Servicios\Restaurantes.asmx" />
+    <Content Include="Servicios\Usuarios.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\UsuariosController.cs" />
+    <Compile Include="Modelos\Imagenes.cs" />
+    <Compile Include="Modelos\Reservaciones.cs" />
+    <Compile Include="Modelos\Restaurante.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Restaurantes.asmx.cs">
+      <DependentUpon>Restaurantes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicios\Usuarios.asmx.cs">
+      <DependentUpon>Usuarios.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -81,6 +96,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
